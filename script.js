@@ -146,4 +146,15 @@ function init() {
       document.location.reload();
     }
   }
+
+  // Bottom wall
+  if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
+    dy = -dy;
+  }
+
+  // Move Ball
+  x += dx;
+  y += dy;
 }
+
+setInterval(init, 10);
