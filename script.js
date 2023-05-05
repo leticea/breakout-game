@@ -129,5 +129,21 @@ function init() {
   hitDetection();
 
   // Detect left and right walls
-  
+  if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+    dx = -dx;
+  }
+
+  // Detect top wall
+  if (y + dy < ballRadius) {
+    dy = -dy;
+  } else if (y + dy > canvas.height - ballRadius) {
+    // Detect paddle hits
+    if (x > paddleX && x < paddleX + paddleWidth) {
+      dy = -dy;
+    } else {
+      // If ball doesn't hit paddle
+      alert('Game Over!');
+      document.location.reload();
+    }
+  }
 }
