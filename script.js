@@ -8,3 +8,16 @@ let canvas = document.getElementById("game"),
 
 let paddleHeight = 12,
   paddleWidth = 72;
+
+// Paddle start position
+let paddleX = (canvas.width - paddleWidth) / 2;
+
+// Bricks
+let rowCount = 5,
+  columnCount = 9,
+  brickWidth = 54,
+  brickHeight = 18,
+  brickPadding = 12,
+  topOffset = 40,
+  leftOffset = 33,
+  score = 0;
