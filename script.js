@@ -3,7 +3,7 @@ let canvas = document.getElementById("game"),
   ballRadius = 9,
   x = canvas.width / (Math.floor(Math.random() * Math.random() * 10) + 3),
   y = canvas.height - 40,
-  dx = 2,
+  dx = 4,
   dy = -2;
 
 let paddleHeight = 12,
@@ -142,7 +142,7 @@ function init() {
       dy = -dy;
     } else {
       // If ball doesn't hit paddle
-      alert('Game Over!');
+      alert("Game Over!");
       document.location.reload();
     }
   }
