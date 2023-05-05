@@ -108,11 +108,15 @@ function hitDetection() {
           dy = -dy;
           b.status = 0;
           score++;
+          // Check win
           if (score === rowCount * columnCount) {
-            
+            alert("You Win!");
+            document.location.reload();
           }
         }
       }
     }
   }
 }
+
+
