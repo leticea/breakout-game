@@ -85,3 +85,10 @@ function drawBricks() {
     }
   }
 }
+
+// Track score
+function trackScore() {
+  ctx.font = "bold 16px sans-serif";
+  ctx.fillStyle = "#333";
+  ctx.fillText("Score : " + score, 8, 24);
+}
