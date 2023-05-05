@@ -66,3 +66,22 @@ function drawBall() {
   ctx.fill();
   ctx.closePath();
 }
+
+// Draw bricks
+function drawBricks() {
+  for (let c = 0; c < columnCount; c++) {
+    for (let r = 0; r < rowCount; r++) {
+      if (bricks[c][r].status === 1) {
+        let brickX = c * (brickWidth + brickPadding) + leftOffset;
+        let brickY = r * (brickHeight + brickPadding) + topOffset;
+        bricks[c][r].x = brickX;
+        bricks[c][r].y = brickY;
+        ctx.beginPath();
+        ctx.roundRect(brickX, brickY, brickWidth, brickHeight, 30);
+        ctx.fillStyle = "#333";
+        ctx.fill();
+        ctx.closePath();
+      }
+    }
+  }
+}
