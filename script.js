@@ -119,4 +119,15 @@ function hitDetection() {
   }
 }
 
+// Main function
+function init() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  trackScore();
+  drawBricks();
+  drawBall();
+  drawPaddle();
+  hitDetection();
 
+  // Detect left and right walls
+  
+}
