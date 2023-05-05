@@ -21,3 +21,13 @@ let rowCount = 5,
   topOffset = 40,
   leftOffset = 33,
   score = 0;
+
+// Bricks array
+let bricks = [];
+for (let c = 0; c < columnCount; c++) {
+  bricks[c] = [];
+  for (let r = 0; r < rowCount; r++) {
+    // Set position of bricks
+    bricks[c][r] = { x: 0, y: 0, status: 1 };
+  }
+}
