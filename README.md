@@ -23,7 +23,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Joguinho bem bacana desenvolvido com JavaScript.
+Joguinho desenvolvido com JavaScript.
 
 Aula do canal [AsmrProg](https://www.youtube.com/watch?v=VG28CuvY_ZA)
 
