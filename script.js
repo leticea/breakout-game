@@ -31,3 +31,14 @@ for (let c = 0; c < columnCount; c++) {
     bricks[c][r] = { x: 0, y: 0, status: 1 };
   }
 }
+
+// Mouse moving eventListener and function
+document.addEventListener("mousemove", mouseMoveHandler, false);
+
+// Move paddle with mouse
+function mouseMoveHandler(e) {
+  let relativeX = e.clientX - canvas.offsetLeft;
+  if (relativeX > 0 && relativeX < canvas.width) {
+    paddleX = relativeX - paddleWidth / 2;
+  }
+}
