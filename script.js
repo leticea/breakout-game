@@ -92,3 +92,27 @@ function trackScore() {
   ctx.fillStyle = "#333";
   ctx.fillText("Score : " + score, 8, 24);
 }
+
+// Check ball hit bricks
+function hitDetection() {
+  for (let c = 0; c < columnCount; c++) {
+    for (let r = 0; r < rowCount; r++) {
+      let b = bricks[c][r];
+      if (b.status === 1) {
+        if (
+          x > b.x &&
+          x < b.x + brickWidth &&
+          y > b.y &&
+          y < b.y + brickHeight
+        ) {
+          dy = -dy;
+          b.status = 0;
+          score++;
+          if (score === rowCount * columnCount) {
+            
+          }
+        }
+      }
+    }
+  }
+}
