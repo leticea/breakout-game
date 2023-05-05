@@ -42,3 +42,18 @@ function mouseMoveHandler(e) {
     paddleX = relativeX - paddleWidth / 2;
   }
 }
+
+// Draw paddle
+function drawPaddle() {
+  ctx.beginPath();
+  ctx.roundRect(
+    paddleX,
+    canvas.height - paddleHeight,
+    paddleWidth,
+    paddleHeight,
+    30
+  );
+  ctx.fillStyle = "#333";
+  ctx.fill();
+  ctx.closePath();
+}
